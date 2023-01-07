@@ -7,8 +7,7 @@ import { Session, unstable_getServerSession } from 'next-auth'
 import { authOptions } from '../pages/api/auth/[...nextauth]'
 
 interface IProps {
-  children: React.ReactNode,
-  session: any
+  children: React.ReactNode
 }
 
 // const RootLayout = async ({children}: IProps) => {
