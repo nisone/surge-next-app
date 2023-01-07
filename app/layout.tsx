@@ -1,10 +1,16 @@
+'use client'
+import Script from 'next/script'
+import { SessionProvider } from 'next-auth/react'
 import './globals.css'
 
+interface IProps {
+  children: React.ReactNode,
+  session: any
+}
+
 export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+  children, session
+}: IProps) {
   return (
     <html lang="en">
       {/*
@@ -12,7 +18,11 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body>
+        <SessionProvider session={session}>
+        {children}
+        </SessionProvider>
+      </body>
     </html>
   )
 }

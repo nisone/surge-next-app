@@ -1,0 +1,12 @@
+.nav {
+    @apply bg-gray-800;
+  }
+  
+  .nav-item {
+    @apply py-2 px-4 font-semibold text-white;
+  }
+  
+  .nav-item:hover {
+    @apply bg-gray-700;
+  }
+  
