@@ -1,18 +1,12 @@
 'use client';
 import React from "react";
 import { useState } from "react";
-import Link from "next/link";
-import { useRouter } from 'next/navigation';
-import { User } from 'firebase/auth'
-import {auth, db} from "../../../firebase/client"
-import { signInWithEmailAndPassword } from "firebase/auth";
 import useStore from "../../../store/store"
 import { signIn } from "next-auth/react";
 
 // layout for page
 
 export default function Login() {
-  const router = useRouter();
   const isLoggedIn = useStore((state) => state.isLoggedIn)
   const setIsLoggedIn = useStore((state) => state.setIsLoggedIn)
   const setUserEmail = useStore((state) => state.setUserEmail)
