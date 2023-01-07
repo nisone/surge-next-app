@@ -1,11 +1,12 @@
-import NextAuth from "next-auth"
+import NextAuth, { NextAuthOptions } from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials";
 // import GoogleProvider from "next-auth/providers/google"
 import { FirestoreAdapter } from "@next-auth/firebase-adapter"
 
 // For more information on each option (and a full list of options) go to
 // https://next-auth.js.org/configuration/options
-export default NextAuth({
+
+export const authOptions: NextAuthOptions = {
   // https://next-auth.js.org/providers
   providers: [
     // GoogleProvider({
@@ -53,4 +54,6 @@ export default NextAuth({
     strategy: 'jwt'
   }
   // ...
-});
+}
+
+export default NextAuth(authOptions);
