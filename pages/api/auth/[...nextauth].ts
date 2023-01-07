@@ -50,7 +50,7 @@ export default NextAuth({
     // },
   }),
   session: {
-    strategy: 'database'
+    strategy: 'jwt'
   }
   // ...
 });

@@ -1,16 +1,18 @@
 'use client'
 import Script from 'next/script'
 import { SessionProvider } from 'next-auth/react'
+import type { AppProps } from 'next/app'
 import './globals.css'
+import { Session } from 'next-auth'
 
-interface IProps {
+interface IProps<T> {
   children: React.ReactNode,
-  session: any
+  // pageProps: {session?: Session}
 }
 
 export default function RootLayout({
-  children, session
-}: IProps) {
+  children,
+}: IProps<{session: Session}>) {
   return (
     <html lang="en">
       {/*
@@ -19,9 +21,7 @@ export default function RootLayout({
       */}
       <head />
       <body>
-        <SessionProvider session={session}>
-        {children}
-        </SessionProvider>
+          {children}
       </body>
     </html>
   )
