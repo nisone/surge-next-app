@@ -4,8 +4,10 @@ import admin from 'firebase-admin'
 import { fireConfig } from './fireConfig'
 
 try {
+  const credential = JSON.parse(process.env.FIREBASE_CONFIG!)
+
   admin.initializeApp({
-    credential: admin.credential.cert(fireConfig),
+    credential: admin.credential.cert(credential),
   })
   console.log('Initialized.')
 } catch (error: any) {
@@ -18,4 +20,6 @@ try {
   }
 }
 
-export default admin
+const firestore = admin.firestore()
+const auth = admin.auth()
+export {firestore, auth}

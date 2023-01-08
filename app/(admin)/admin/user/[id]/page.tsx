@@ -1,5 +1,9 @@
-async function getUser(userId: String) {
-    return userId;
+import { firestore } from "../../../../../lib/firebase";
+
+async function getUser(userId: string) {
+    const result = await firestore.collection('users').doc(userId).get();
+
+    return result;
 }
 
 export default async function user({params} : any) {
@@ -7,7 +11,7 @@ export default async function user({params} : any) {
 
     return (
         <>
-            <h1>User {user}</h1>
+            <h1>User {user.data()?.name}</h1>
         </>
     );
 }

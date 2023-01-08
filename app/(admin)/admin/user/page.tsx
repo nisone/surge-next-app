@@ -1,5 +1,11 @@
+import {firestore} from "../../../../lib/firebase";
+import UserCard from "../../../../components/Cards/UserCard"
+
 async function getUsers() {
-    return [] as any[];
+
+    const result = await firestore.collection('users').get();
+
+    return result.docs;
 }
 
 export default async function users() {
@@ -9,9 +15,11 @@ export default async function users() {
         <>
             <div>
                 {users?.map((user) => {
-                    return <h1 key={user.id}>driver.id</h1>;
+                    return <UserCard key={user.id} userData={user.data()} />;
                 })}
             </div>
         </>
     );
 }
+
+

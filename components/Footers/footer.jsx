@@ -29,7 +29,7 @@ export default function Footer() {
                     <p class="order-2 md:order-1 mt-8 md:mt-0"> &copy; Surge Ryder, 2021. </p>
                     <div class="order-1 md:order-2">
                         <Link href={"/about"}><span class="px-2">About us</span></Link>
-                        <Link href={"/contact"}><span class="px-2 border-l">Contact us</span></Link>
+                        {/* <Link href={"/contact"}><span class="px-2 border-l">Contact us</span></Link> */}
                         <Link href={"/privacy"}><span class="px-2 border-l">Privacy Policy</span></Link>
                     </div>
                 </div>

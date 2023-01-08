@@ -1,8 +1,11 @@
+import { firestore } from "../../../../lib/firebase";
+import DriverCard from "../../../../components/Cards/DriverCard"
 
 
 async function getDrivers() {
-    
-    return [] as any[];
+    const result = await firestore.collection('drivers').get();
+
+    return result.docs;
 }
 
 export default async function drivers() {
@@ -11,8 +14,9 @@ export default async function drivers() {
     return (
         <>
             <div>   
+                <h1 className="py-10 text-lg">Drivers</h1>
                 {drivers?.map((driver) => {
-                    return <h1 key={driver.id}>driver.id</h1>;
+                    return <DriverCard key={driver.id} driverData={driver.data()} />;
                 })}
             </div>
         </>

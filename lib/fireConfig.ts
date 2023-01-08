@@ -1,5 +1,9 @@
 
 export const fireConfig = {
+    privateKey: process.env.PRIVATE_KEY,
+    clientEmail: process.env.CLIENT_EMAIL,
+    authUrl: process.env.AUTH_URL,
+    privateKeyId: process.env.PRIVATE_KEY_ID,
     apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
     authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
     projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,

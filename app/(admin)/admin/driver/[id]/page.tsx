@@ -1,5 +1,9 @@
-async function getDriver(driverId: String) {
-    return driverId;
+import { firestore } from "../../../../../lib/firebase";
+
+async function getDriver(driverId: string) {
+    const result = await firestore.collection('drivers').doc(driverId).get();
+
+    return result;
 }
 
 export default async function driver({params} : any) {
@@ -7,7 +11,7 @@ export default async function driver({params} : any) {
 
     return (
         <>
-            <h1>Driver {driver}</h1>
+            <h1>Driver {driver.data()?.name}</h1>
         </>
     );
 }
