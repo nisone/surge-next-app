@@ -3,11 +3,7 @@ import { SessionProvider } from 'next-auth/react'
 import './globals.css'
 import { Session} from 'next-auth'
 
-interface IProps {
-  children: React.ReactNode,
-}
-
-export default function RootLayout({ children }: IProps) {
+export default function RootLayout(props: any) {
   return (
     <html lang="en">
       {/*
@@ -16,8 +12,8 @@ export default function RootLayout({ children }: IProps) {
       */}
       <head />
       <body>
-        <SessionProvider  refetchInterval={5 * 60}>
-          {children}
+        <SessionProvider session={props.session}  refetchInterval={5 * 60}>
+          {props.children}
         </SessionProvider>
       </body>
     </html>
