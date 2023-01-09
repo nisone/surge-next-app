@@ -1,10 +1,12 @@
+'use client'
 import React from "react";
 
 // components
 
 import CardStats from "../Cards/CardStats";
 
-export default function HeaderStats() {
+export default function HeaderStats({ data }) {
+  const total = data.drivers + data.users
   return (
     <>
       {/* Header */}
@@ -16,9 +18,9 @@ export default function HeaderStats() {
               <div className="w-full lg:w-6/12 xl:w-3/12 px-4">
                 <CardStats
                   statSubtitle="Drivers"
-                  statTitle="350,897"
+                  statTitle={data.drivers + ''}
                   statArrow="up"
-                  statPercent="3.48"
+                  statPercent={((data.drivers / total) * 100).toPrecision(2)}
                   statPercentColor="text-emerald-500"
                   statDescripiron="Since last month"
                   statIconName="far fa-chart-bar"
@@ -28,9 +30,9 @@ export default function HeaderStats() {
               <div className="w-full lg:w-6/12 xl:w-3/12 px-4">
                 <CardStats
                   statSubtitle="Users"
-                  statTitle="2,356"
+                  statTitle={data.users  + ''}
                   statArrow="down"
-                  statPercent="3.48"
+                  statPercent={((data.users / total) * 100).toPrecision(2)}
                   statPercentColor="text-red-500"
                   statDescripiron="Since last week"
                   statIconName="fas fa-chart-pie"
@@ -40,9 +42,9 @@ export default function HeaderStats() {
               <div className="w-full lg:w-6/12 xl:w-3/12 px-4">
                 <CardStats
                   statSubtitle="Payments"
-                  statTitle="924"
+                  statTitle={data.transactions  + ''}
                   statArrow="down"
-                  statPercent="1.10"
+                  statPercent={(data.transactions / data.users).toFixed(2)}
                   statPercentColor="text-orange-500"
                   statDescripiron="Since yesterday"
                   statIconName="fas fa-users"
@@ -52,9 +54,9 @@ export default function HeaderStats() {
               <div className="w-full lg:w-6/12 xl:w-3/12 px-4">
                 <CardStats
                   statSubtitle="Trips"
-                  statTitle="49,65%"
+                  statTitle={data.requests  + ''}
                   statArrow="up"
-                  statPercent="12"
+                  statPercent={(data.requests / data.users).toPrecision(2)}
                   statPercentColor="text-emerald-500"
                   statDescripiron="Since last month"
                   statIconName="fas fa-percent"

@@ -4,10 +4,10 @@ import admin from 'firebase-admin'
 import { fireConfig } from './fireConfig'
 
 try {
-  const credential = JSON.parse(process.env.FIREBASE_CONFIG!)
+  // const credential = JSON.parse(process.env.FIREBASE_CONFIG!)
 
   admin.initializeApp({
-    credential: admin.credential.cert(credential),
+    credential: admin.credential.cert(fireConfig),
   })
   console.log('Initialized.')
 } catch (error: any) {

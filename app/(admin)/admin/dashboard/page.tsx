@@ -11,7 +11,7 @@ export default function Dashboard() {
 
     <div className="flex h-3/4">
      Welcome back {session?.user ? (
-      session.user.email
+      session.user.name
      ) : (
       'no user'
      )}
