@@ -9,7 +9,7 @@ export default function Dashboard() {
 
   return (
 
-    <div className="flex h-3/4">
+    <div className="flex">
      Welcome back {session?.user ? (
       session.user.name
      ) : (

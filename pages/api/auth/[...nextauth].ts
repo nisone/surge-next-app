@@ -1,3 +1,4 @@
+import { FirestoreAdapter } from "@next-auth/firebase-adapter";
 import NextAuth, { NextAuthOptions } from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials";
 // import GoogleProvider from "next-auth/providers/google"
@@ -37,19 +38,19 @@ export const authOptions: NextAuthOptions = {
   pages: {
     signIn: '/login'
   },
-  // adapter: FirestoreAdapter({
-  //   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  //   authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  //   projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-  //   storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  //   messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  //   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-  //   // Optional emulator config (see below for options)
-  //   // emulator: {
-  //   //   host: 'localhost',
-  //   //   port: 3001
-  //   // },
-  // }),
+  adapter: FirestoreAdapter({
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+    // Optional emulator config (see below for options)
+    // emulator: {
+    //   host: 'localhost',
+    //   port: 3001
+    // },
+  }),
   session: {
     strategy: 'jwt'
   }

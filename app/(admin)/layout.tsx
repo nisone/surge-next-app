@@ -32,14 +32,14 @@ export default async function RootLayout({
   return (
     <>
       <SideNavbar />
-      <div className={"relative md:ml-64 bg-slate-100"}>
+      <div className={"relative  h-screen overflow-y-auto md:ml-64 bg-slate-100"}>
         <AdminNavbar />
         <HeaderStats data={data}/>
         <div className={"px-4 md:px-10 mx-auto w-full -m-100"}>
           {children}
-          <FooterAdmin />
         </div>
       </div>
+      <FooterAdmin />
     </>
   );
 }

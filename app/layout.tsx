@@ -1,6 +1,7 @@
 'use client'
 import { SessionProvider } from 'next-auth/react'
 import './globals.css'
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import { Session} from 'next-auth'
 
 export default function RootLayout(props: any) {

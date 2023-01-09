@@ -14,6 +14,7 @@ export default async function users() {
     return (
         <>
             <div>
+            <h1 className="py-10 text-lg">Dashboard / Users</h1>
                 {users?.map((user) => {
                     return <UserCard key={user.id} userData={user.data()} />;
                 })}

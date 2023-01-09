@@ -17,7 +17,7 @@ export default function SideNavbar() {
             type="button"
             onClick={() => setCollapseShow("bg-white m-2 py-3 px-6")}
           >
-            <i className="fas fa-bars">=</i>
+            <i className="fas fa-bars"></i>
           </button>
           {/* Brand */}
           <Link href="/"
@@ -57,7 +57,7 @@ export default function SideNavbar() {
                     className="cursor-pointer text-black opacity-90 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent"
                     onClick={() => setCollapseShow("hidden")}
                   >
-                    <i className="fas fa-times">X</i>
+                    <i className="fas fa-times"></i>
                   </button>
                 </div>
               </div>
@@ -68,7 +68,7 @@ export default function SideNavbar() {
                 <Link href="/admin/driver"
                     className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
                   >
-                    <i className="fas fa-fingerprint text-blueGray-400 mr-2 text-sm"></i>{" "}
+                    <i className="fas fa-user-circle text-blueGray-400 mr-2 text-sm"></i>{" "}
                     Drivers
                 </Link>
               </li>
@@ -77,7 +77,7 @@ export default function SideNavbar() {
                 <Link href="/admin/user"
                     className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
                   >
-                    <i className="fas fa-clipboard-list text-blueGray-300 mr-2 text-sm"></i>{" "}
+                    <i className="fas fa-users text-blueGray-400 mr-2 text-sm"></i>{" "}
                     Users
                 </Link>
               </li>
@@ -86,7 +86,7 @@ export default function SideNavbar() {
                 <Link href="/admin/payment"
                     className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
                   >
-                    <i className="fas fa-clipboard-list text-blueGray-300 mr-2 text-sm"></i>{" "}
+                    <i className="fas fa-credit-card text-blueGray-400 mr-2 text-sm"></i>{" "}
                     Payments
                 </Link>
               </li>
@@ -95,7 +95,7 @@ export default function SideNavbar() {
                 <Link href="/admin/trip"
                     className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
                   >
-                    <i className="fas fa-clipboard-list text-blueGray-300 mr-2 text-sm"></i>{" "}
+                    <i className="fas fa-suitcase text-blueGray-400 mr-2 text-sm"></i>{" "}
                     Trips
                 </Link>
               </li>

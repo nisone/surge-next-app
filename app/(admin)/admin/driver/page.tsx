@@ -14,7 +14,7 @@ export default async function drivers() {
     return (
         <>
             <div>   
-                <h1 className="py-10 text-lg">Drivers</h1>
+                <h1 className="py-10 text-lg">Dashboard / Drivers</h1>
                 {drivers?.map((driver) => {
                     return <DriverCard key={driver.id} driverData={driver.data()} />;
                 })}
