@@ -210,7 +210,7 @@ export default function Home() {
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
                 <div className="text-slate-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-                  <i className="fas fa-simplybuilt text-xl"></i>
+                  <i className="fas fa-box text-xl"></i>
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-white">
                   Easy to use

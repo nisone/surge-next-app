@@ -16,7 +16,7 @@ export default function HowTo() {
     }
 
     return (
-        <div id="carouselExampleIndicators" className="carousel slide relative" data-bs-ride="carousel">
+        <div id="carouselExampleIndicators" className="carousel slide relative " data-bs-ride="carousel">
             <div className="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
                 <button
                     type="button"
@@ -77,22 +77,22 @@ export default function HowTo() {
                     aria-label="Slide 8"
                 ></button>
             </div>
-            <div className="carousel-inner relative w-full overflow-hidden">
-                <div className={"carousel-item float-left w-full object-contain overflow-hidden " + (index == 0 ? "active" : "") }>
+            <div className="carousel-inner relative w-full overflow-hidden m-auto">
+                <div className={"carousel-item w-full object-contain overflow-hidden " + (index == 0 ? "active" : "") }>
                     <img
                         src={"/images/step1.jpg"}
                         className="block w-full"
                         alt="Wild Landscape"
                     />
                 </div>
-                <div className={"carousel-item float-left w-full object-contain overflow-hidden " + (index == 1 ? "active" : "") }>
+                <div className={"carousel-item w-full object-contain overflow-hidden " + (index == 1 ? "active" : "") }>
                     <img
                         src={"/images/step2.jpg"}
                         className="block w-full"
                         alt="Camera"
                     />
                 </div>
-                <div className={"carousel-item float-left w-full object-contain overflow-hidden " + (index == 2 ? "active" : "") }>
+                <div className={"carousel-item w-full object-contain overflow-hidden " + (index == 2 ? "active" : "") }>
                     <img
                         src={"/images/step3.jpg"}
                         className="block w-full"

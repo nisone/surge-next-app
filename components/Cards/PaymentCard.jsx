@@ -6,7 +6,7 @@ export default function PaymentCard({
     paymentData
 }) {
   return (
-    <Link href={"/admin/trip/" + paymentData.requestId}>
+    <Link href={"/admin/trip"}>
       <div className="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-3 shadow-lg">
         <div className="flex-auto p-4">
           <div className="flex flex-wrap">
