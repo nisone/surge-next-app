@@ -2,7 +2,6 @@
 import { SessionProvider } from 'next-auth/react'
 import './globals.css'
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import { Session} from 'next-auth'
 
 export default function RootLayout(props: any) {
   return (
@@ -13,7 +12,7 @@ export default function RootLayout(props: any) {
       */}
       <head />
       <body>
-        <SessionProvider session={props.session}  refetchInterval={5 * 60}>
+        <SessionProvider session={props.session} refetchInterval={5 * 60}>
           {props.children}
         </SessionProvider>
       </body>

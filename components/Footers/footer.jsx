@@ -9,15 +9,17 @@ export default function Footer() {
                     <h3 class="text-3xl mb-3"> Download our Surge Ryder app </h3>
                     <p> Stay fit. All day, every day. </p>
                     <div class="flex justify-center my-10">
-                        <div class="flex items-center border w-auto rounded-lg px-4 py-2 w-52 mx-2">
-                            <img alt={'img'} src="https://cdn-icons-png.flaticon.com/512/888/888857.png" class="w-7 md:w-8"/>
-                            <div class="text-left ml-3">
-                                <p class='text-xs text-gray-200'>Download on </p>
-                                <p class="text-sm md:text-base"> Google Play Store </p>
+                        <Link href={'https://play.google.com/store/apps/details?id=com.surgeriders.user_app'}>
+                            <div class="flex items-center border w-auto rounded-lg px-4 py-2 w-52 mx-2">
+                                <img alt={'img'} src="https://cdn-icons-png.flaticon.com/512/888/888857.png" class="w-7 md:w-8" />
+                                <div class="text-left ml-3">
+                                    <p class='text-xs text-gray-200'>Download on </p>
+                                    <p class="text-sm md:text-base"> Google Play Store </p>
+                                </div>
                             </div>
-                        </div>
+                        </Link>
                         <div class="flex items-center border w-auto rounded-lg px-4 py-2 w-44 mx-2">
-                            <img alt={'img'} src="https://cdn-icons-png.flaticon.com/512/888/888841.png" class="w-7 md:w-8"/>
+                            <img alt={'img'} src="https://cdn-icons-png.flaticon.com/512/888/888841.png" class="w-7 md:w-8" />
                             <div class="text-left ml-3">
                                 <p class='text-xs text-gray-200'>Download on </p>
                                 <p class="text-sm md:text-base"> Apple Store </p>
